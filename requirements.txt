@@ -1,0 +1,20 @@
+# Core AI & RAG
+llama-index==0.12.5
+llama-index-vector-stores-chroma==0.4.1
+llama-index-llms-anthropic==0.6.10
+llama-index-embeddings-huggingface==0.5.2
+llama-index-readers-file==0.4.7
+
+# Vector Database (free, local)
+chromadb==0.6.3
+
+# Frontend
+streamlit==1.41.1
+
+# Document Readers
+pypdf==5.1.0
+python-docx==1.1.2
+docx2txt==0.8
+
+# Utilities
+python-dotenv==1.0.1
