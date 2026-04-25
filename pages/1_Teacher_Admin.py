@@ -52,11 +52,12 @@ st.markdown("""
 
 def check_admin_password():
     """Verify teacher's admin password."""
-   # admin_pw = os.environ.get(ADMIN_PASSWORD_ENV, "teacher123")
-   try:
-    admin_pw = st.secrets.get("ADMIN_PASSWORD", "teacher123")
-except Exception:
-    admin_pw = os.environ.get(ADMIN_PASSWORD_ENV, "teacher123")
+    #admin_pw = os.environ.get(ADMIN_PASSWORD_ENV, "teacher123")
+   
+    try:
+        admin_pw = st.secrets.get("ADMIN_PASSWORD", "teacher123")
+    except Exception:
+        admin_pw = os.environ.get(ADMIN_PASSWORD_ENV, "teacher123")
     
 
     if "admin_authenticated" not in st.session_state:

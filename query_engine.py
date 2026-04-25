@@ -58,11 +58,11 @@ def get_query_engine():
     # ── Check API key ──
     #api_key = os.environ.get("ANTHROPIC_API_KEY", "")
     import streamlit as st
-try:
-    api_key = st.secrets["ANTHROPIC_API_KEY"]
-except Exception:
-    api_key = os.environ.get("ANTHROPIC_API_KEY", "")
-    
+    try:
+        api_key = st.secrets["ANTHROPIC_API_KEY"]
+    except Exception:
+        api_key = os.environ.get("ANTHROPIC_API_KEY", "")
+
     if not api_key:
         raise ValueError(
             "ANTHROPIC_API_KEY not set! Please set it:\n"
