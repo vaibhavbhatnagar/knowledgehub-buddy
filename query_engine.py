@@ -84,7 +84,7 @@ def get_query_engine():
 
     # ── Setup Claude as the LLM ──
     llm = Anthropic(
-        model="claude-3-5-sonnet-latest",
+        model="claude-haiku-4-5-20251001",
         api_key=api_key,
         temperature=0.3,       # Lower = more focused, less creative
         max_tokens=1500,       # Enough for answer + quiz
